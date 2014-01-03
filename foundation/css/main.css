@@ -1,0 +1,39 @@
+body {
+    font: 12px Tahoma, sans-serif;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; margin-bottom: 0.5em; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+
+p { margin-bottom: 0.7em; font-size: 1em; }
+
+.fleft { float: left; }
+#header {
+   margin-bottom: 20px;
+}
+#logo {
+    background: #fff;
+}
+#menu {
+    margin-top: 70px;
+    background: rgba(46, 66, 91, 0.7);
+}
+.header-nav-item a {
+    padding: 8px 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+.content-eye { margin-bottom: 20px; }
+
+
+/*
+
+ */
+h1, h2, h3, h4, h5, h6 { font-family: Tahoma, sans-serif; }
+.row { max-width: 960px; }
+#menu { list-style: none; margin-left: 0; }
