@@ -1,0 +1,48 @@
+@import 'grid.less';
+body {
+    font: 12px Tahoma, sans-serif;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; margin-bottom: 0.5em; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+
+p { margin-bottom: 0.7em; }
+
+
+#logo { .column(3); }
+#menu { .column(9); }
+
+#header,
+#content {
+    .row(12);
+}
+.content-eye {
+    .column(4);
+}
+.box-text {
+    .column(6);
+}
+.fleft { float: left; }
+#header {
+   margin-bottom: 20px;
+}
+#logo {
+    background: #fff;
+}
+#menu {
+    margin-top: 70px;
+    background: rgba(46, 66, 91, 0.7);
+}
+.header-nav-item a {
+    padding: 8px 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+.content-eye { font-size: 1.1em; margin-bottom: 20px; }
+
+#header, #content { margin: 0 auto; }
