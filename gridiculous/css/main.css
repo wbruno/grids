@@ -30,10 +30,4 @@ p { margin-bottom: 0.7em; }
 }
 .content-eye { font-size: 1.1em; margin-bottom: 20px; }
 
-
-ul { list-style: none; padding: 0; }
-#header-nav { width: 960px; }
-#header, #content {
-    width: 960px;
-    margin: 0 auto;
-}
+ul { padding: 0; list-style: none; }
