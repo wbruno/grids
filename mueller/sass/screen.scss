@@ -1,0 +1,109 @@
+// ******************************************************************************************************
+//
+// MUELLER
+// modular grid system
+//
+// _screen.scss
+//
+// ******************************************************************************************************
+
+// ------------------------------------------------------------------------------------------------------
+// IMPORTS & VARIABLES
+
+@import "blueprint/reset";
+@import "partials/base";
+@import "partials/default";
+@import "partials/large";
+@import "partials/tablet-portrait";
+@import "partials/handheld";
+@import "partials/handheld-landscape";
+
+@import "compass";
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3/border-radius";
+@import "compass/utilities/general/clearfix";
+
+@import "grid/grid-system";
+
+
+// ------------------------------------------------------------------------------------------------------
+// PAGE STYLES
+
+#mueller-indicators {
+    position: fixed;
+    top: 0;
+    left: 0;
+    p {
+        margin: 0 0 2px;
+        padding: 0.25em 1em;
+        font-size: 11px;
+        font-weight: bold;
+        color: #fff;
+        @include border-bottom-right-radius(4px);
+        background: $text-color;
+        @include opacity(.4);
+     }
+}
+
+body {
+    font-family: $font-family;
+    font-weight: normal;
+    color: $text-color;
+    background: $background-color;
+    margin: 0; padding: 3em 0;
+    div#wrapper {
+        width: 100%;
+    }
+}
+
+section {
+    padding-top: 3em;
+    @include clearfix;
+}
+
+p {
+    @include adjust-font-size-to(16px, 1);
+    padding: 0;
+    margin: 1.5em 0;
+}
+
+h1 {
+    display: block;
+    @include adjust-font-size-to(32px, 1);
+    font-family: $font-family;
+    font-weight: 200;
+    color: #333;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.box {
+    display: block;
+    background: $box-color;
+    color: $background-color;
+    padding: 0em 1.5em;
+    margin-bottom: 1.5em;
+    @include border-radius(4px);
+    @include clearfix;
+}
+
+
+$gc: 12;  /* grid columns */
+$gw: 60px;  /* grid width */
+$gm: 20px;  /* grid margin */
+// container
+.g-tp-c {
+  @extend .g-base-c;
+  width: $gw*$gc+$gm*($gc - 1);  /* 700px */
+}
+// creating the grid-columns
+@include grids(tp,
+  0 1 2 3 4 6 12 16 24,  /* columns */
+  $gc,
+  $gw,
+  $gm,
+  0 2 4 8 12 16);  /* append/prepend/push/pull */
+
+.content-eye {
+    @extend .c-1;
+}

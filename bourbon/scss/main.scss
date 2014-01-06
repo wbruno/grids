@@ -1,0 +1,66 @@
+body {
+    font: 12px Tahoma, sans-serif;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; margin-bottom: 0.5em; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+
+p { margin-bottom: 0.7em; }
+
+.fleft { float: left; }
+#header {
+   margin-bottom: 20px;
+}
+#logo {
+    background: #fff;
+}
+#menu {
+    margin-top: 70px;
+    background: rgba(46, 66, 91, 0.7);
+}
+.header-nav-item a {
+    padding: 8px 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+.content-eye { font-size: 1.1em; margin-bottom: 20px; }
+
+ul { padding: 0; list-style: none; }
+
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+
+// Change the grid settings
+$column: 60px;
+$gutter: 20px;
+$grid-columns: 12;
+$max-width: em(1200);
+
+.content-eye {
+    @include span-columns(4);
+    @include omega(4);
+}
+.box-text {
+    @include span-columns(6);
+    @include omega(2n);
+}
+#logo {
+    @include span-columns(3);
+    @include omega(1);
+    margin-left: 0;
+}
+#menu {
+    @include span-columns(9);
+    @include omega(2);
+}
+#header,
+#content {
+    width: 960px; margin: 0 auto;
+}
